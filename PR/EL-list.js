@@ -133,14 +133,15 @@ function createElementList(parentElementID, listElementID, inputArray, fieldsArr
 				var idAlphes = table[k].getAttribute("id").replace("-table-for", "");
 				if(fieldFilter==""){
 					document.getElementById(idAlphes).style.display = "";
+                    //div_el_innerDiv.css("margin-top","0px");
 				} else {
 					document.getElementById(idAlphes).style.display = "none";
 				}
-				if(textCurrentTable == ""){
-					table[k].style.position = "absolute";
-					table[k].style.marginTop = 0; ;
+
+				if(textCurrentTable != ""){
+                    div_el_innerDiv.css("margin-top","-24px");
 				} else {
-					table[k].style.position = "inherit";
+                    //div_el_innerDiv.css("margin-top","0px");
 				}
 			}
 		});
@@ -161,7 +162,7 @@ function createElementList(parentElementID, listElementID, inputArray, fieldsArr
 			"font-family": "Arial, Verdana, sans-serif"
 		});
 
-		h1_el_header.css({"height": "41px", "background-color": "rgba(32, 191, 251, 0.78)", "margin": "0", "font-weight": "normal",
+		h1_el_header.css({"height": "41px", "background-color": "rgba(111, 111, 111, 0.99)", "margin": "0", "font-weight": "normal",
 			"font-size": "19pt", "text-align": "center", "color": "White", "padding-top": "4px", "border-bottom": "1px solid black"
 		});
 
@@ -170,7 +171,7 @@ function createElementList(parentElementID, listElementID, inputArray, fieldsArr
 		});
 
 		$(selectorAlpha).css({
-			"background-color": "rgb(78, 78, 78)", "font-family": "Arial", "opacity": "0.5", "font-size": "12pt",
+			"background-color": "rgb(78, 78, 78)", "font-family": "Arial", "opacity": "0.9", "font-size": "12pt",
 			"font-weight": "Bold", "text-indent": "10px", "color": "White", "line-height": "24px", "height": "24px"
 		});
 
